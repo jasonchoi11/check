@@ -18,9 +18,9 @@ public class Check {
 
     @PostPersist
     public void onPostPersist(){
-        ScheduleFixed scheduleFixed = new ScheduleFixed();
-        BeanUtils.copyProperties(this, scheduleFixed);
-        scheduleFixed.publishAfterCommit();
+//        ScheduleFixed scheduleFixed = new ScheduleFixed();
+//        BeanUtils.copyProperties(this, scheduleFixed);
+//        scheduleFixed.publishAfterCommit();
 
         Checked checked = new Checked();
         BeanUtils.copyProperties(this, checked);
@@ -28,14 +28,14 @@ public class Check {
 
     }
 
-//    @PostUpdate
-//    public void onPostUpdate(){
-//        Checked checked = new Checked();
-//        BeanUtils.copyProperties(this, checked);
-//        checked.publishAfterCommit();
-//
-//
-//    }
+    @PostUpdate
+    public void onPostUpdate(){
+        Checked checked = new Checked();
+       BeanUtils.copyProperties(this, checked);
+        checked.publishAfterCommit();
+
+
+    }
 
 
     public Long getId() {
