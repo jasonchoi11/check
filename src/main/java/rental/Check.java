@@ -22,17 +22,20 @@ public class Check {
         BeanUtils.copyProperties(this, scheduleFixed);
         scheduleFixed.publishAfterCommit();
 
-
-    }
-
-    @PostUpdate
-    public void onPostUpdate(){
         Checked checked = new Checked();
         BeanUtils.copyProperties(this, checked);
         checked.publishAfterCommit();
 
-
     }
+
+//    @PostUpdate
+//    public void onPostUpdate(){
+//        Checked checked = new Checked();
+//        BeanUtils.copyProperties(this, checked);
+//        checked.publishAfterCommit();
+//
+//
+//    }
 
 
     public Long getId() {
