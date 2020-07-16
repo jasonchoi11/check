@@ -14,6 +14,7 @@ public class Check {
     private Long orderId;
     private String checkDate;
     private String status;
+    private Integer score;
 
     @PostPersist
     public void onPostPersist(){
@@ -63,7 +64,13 @@ public class Check {
         this.status = status;
     }
 
+    public Integer getScore() {
+        return score;
+    }
 
+    public void setScore(Integer score) {
+        this.score = score;
+    }
 
 
 }
