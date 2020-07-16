@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    _PROJECT_NAME: "teamc-check"
+    _PROJECT_NAME: "admin19-sk-check"
 
 phases:
   install:
