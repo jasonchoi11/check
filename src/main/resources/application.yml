@@ -57,8 +57,8 @@ spring:
       bindings:
         event-in:
           group: check
-          destination: rental1
+          destination: rentals
           contentType: application/json
         event-out:
-          destination: rental1
+          destination: rentals
           contentType: application/json
